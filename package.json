@@ -12,7 +12,6 @@
   "type": "module",
   "scripts": {
     "dev": "next dev -p 3001 --turbo",
-    "build": "npm-run-all check-env build-db check-db build-tracker build-geo build-app",
     "build": "npm-run-all check-env build-db check-db build-tracker build-app"
     "start": "next start",
     "build-docker": "npm-run-all build-db build-tracker build-geo build-app",
