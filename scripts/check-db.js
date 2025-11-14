@@ -8,6 +8,11 @@ import { PrismaPg } from '@prisma/adapter-pg';
 
 const MIN_VERSION = '9.4.0';
 
+if (process.env.VERCEL === '1') {
+  console.log('Skipping DB check on Vercel build.');
+  process.exit(0);
+}
+
 if (process.env.SKIP_DB_CHECK) {
   console.log('Skipping database check.');
   process.exit(0);
