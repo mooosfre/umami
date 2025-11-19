@@ -41,6 +41,10 @@ async function checkEnv() {
   } else {
     success('DATABASE_URL is defined.');
   }
+
+  if (process.env.REDIS_URL) {
+    success('REDIS_URL is defined.');
+  }
 }
 
 async function checkConnection() {
